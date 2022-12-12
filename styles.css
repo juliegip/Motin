@@ -1,0 +1,116 @@
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1400px;
+    margin: auto;
+}
+
+li, a, button {
+    text-decoration: none;
+    color: black;
+}
+.container{
+    
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   justify-content: space-between;
+}
+
+
+
+#img-banner {
+    width: 1400px;
+    height: 300px;
+    object-fit:  cover ;
+    object-position:  50%;
+    opacity: 70%;
+ }
+
+#img-logo {
+    height: 135px;
+    position: relative;
+    top: 30px;
+    left: 300px;
+    cursor: pointer;
+
+}
+
+body header div h1 {
+    color: black;
+    position: relative;
+    left: 430px;
+    top: 30px;
+    /* filter: drop-shadow(0 0 5px gray); */
+    z-index: 1;
+}
+
+#menu{
+    background-color: #F5F5F5;
+    width: 100%;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:link {
+    text-decoration: none;
+    color: black;
+}
+.nav_links li a:visited {
+    text-decoration: none;
+}
+
+.nav_links li a:hover {
+    color: crimson;
+}
+
+.gauche {
+    width: 33%;
+    float: left;
+}
+
+.droite {
+    float: right;
+    width: 66%;
+}
+
+#infos {
+        background-color: brown;
+
+  }
+
+#promos {
+    background-color: green; 
+
+}
+
+#contacts {
+    
+    background-color: yellowgreen;
+
+
+}
+
+#articles {
+   
+    background-color: gray;
+    
+
+}
