@@ -1,15 +1,15 @@
-::before,
-::after{
+*, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    max-width: 1400px;
-    margin: auto;
+    /* max-width: 1400px;
+    margin: auto; */
     /* font-family:  à compléter */
     background: #f4f4f4;
+    display: block;
 }
 
 /* Menu navbar */
@@ -17,6 +17,7 @@ body {
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: #a3b0b8;
     display: flex;
@@ -70,12 +71,140 @@ nav {
 }
 
 .nav-authentication {
-    margin-left: auto;
+    margin : auto;
 }
 
 .sign-user{
     display: none;
 }
+/* Bannière Motin Normagri avec image en fond */
+.container-head{
+    display: flex;
+    background-image: url(/images/banner-header.jpg) ;
+    background-size: cover;
+    background-position: center;
+    height:360px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   }
+
+.img-logo {
+    height: 150px;
+    position: relative;
+    margin-top: 100px;
+    cursor: pointer;
+    z-index: 2;
+    margin-left: 5px;
+}
+
+.CompanyName {
+    z-index: 1;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+.CompanyName h1 {
+    color: black;
+    filter: drop-shadow(0 0 5px gray);
+
+}
+
+/* Contenu */
+
+.container-content {
+    display: flex;
+    flex-direction: row;
+}
+.gauche {
+    width: 33%;
+    padding: 10px 10px;
+ }
+
+.gauche h1 {
+    text-align: center;
+padding-bottom: 15px;
+}
+
+ .slider img {
+    max-width: 100%;
+    display: none;
+ }
+
+ img.active {
+    display: block;
+    animation: fade 0.8s;
+ }
+
+ @keyframes fades{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+
+ .cont-btn {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+ }
+
+ .btn-nav {
+   font-size: 50px;
+   cursor: pointer;
+ }
+
+.contacts {
+    background-color: yellowgreen;
+ 
+}
+
+.contacts h3 {
+    margin-bottom: 2px;
+}
+.contacts h5 {
+    margin-top: 0px;
+}
+
+.droite {
+    width: 66%;
+    padding: 10px 10px;
+}
+
+#infos {
+    background-color: brown;
+  }
+
+#promos {
+    background-color: green; 
+
+}
+
+
+
+#articles {
+       background-color: gray;
+}
+
+
+/* Pour ecran tablette >900px */
+
+
+
+.container-foot {
+    display: flex;
+    flex-direction: row;
+}
+
+footer div {
+    margin: 5px 5px 10px 10px;
+}
+
 
 @media (max-width: 900px) {
     nav{
@@ -92,75 +221,72 @@ nav {
         order: 1;
     }
 
-.hamburger {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    background: #a3b0b8;
-    align-items: center;
-    position: relative;
-}
+    .hamburger {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: #a3b0b8;
+        align-items: center;
+        position: relative;
+    }
 
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #333;
-    position: absolute;
-    pointer-events: none;
-    transition: opacity 0.3s 0.15s ease-out;
-}
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
 
-.hamburger span:nth-child(1),.hamburger span:nth-child(3) {
-    transition: transform 0.3s ease-out;
-}
+    .hamburger span:nth-child(1),.hamburger span:nth-child(3) {
+        transition: transform 0.3s ease-out;
+    }
 
-.hamburger span:nth-child(1) {
-    transform: translateY(7px);
-}
-.hamburger span:nth-child(3) {
-    transform: translateY(-7px);
-}
+    .hamburger span:nth-child(1) {
+        transform: translateY(7px);
+    }
+    .hamburger span:nth-child(3) {
+        transform: translateY(-7px);
+    }
 
-.hamburger.open span:nth-child(1) {
-    transform: translate(0) rotate(135deg);
-}
-.hamburger.open span:nth-child(2) {
-    opacity: 0;
-    transition: opacity 0s ease-out;
-}
-.hamburger.open span:nth-child(3) {
-    transform: translate(0) rotate(-135deg);
-}
+    .hamburger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transition: opacity 0s ease-out;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: translate(0) rotate(-135deg);
+    }
+    .navlinks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        background-color: #a3b0b8;
+        top: 100%;
+        left:0;
+        height: 100vh;
+        padding: 15px 50px 15px 20px;
+        margin-left: 0;
+        border-right: 1px solid #C5c5c6;
+        transform: translate(-100%);
+        z-index: 3;
+    }
 
+    .open {
+        transform: translate(0%);
+    }
 
-
-.navlinks-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    background-color: #a3b0b8;
-    top: 100%;
-    left:0;
-    height: 100vh;
-    padding: 15px 50px 15px 20px;
-    margin-left: 0;
-    border-right: 1px solid #C5c5c6;
-    transform: translate(-100%);
-    z-index: 3;
-}
-
-.open {
-    transform: translate(0%);
-}
-
-.navlinks-container a {
-    font-size: 18px;
-    margin: 10px 0;
-}
+    .navlinks-container a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
 
     .nav-authentication {
         order: 3;
@@ -179,77 +305,11 @@ nav {
     }
 }
 
+
+
 @media (max-width: 500px){
     .nav-icon img {
         width: 30px;
     };
 }
 
-/* Bannière Motin Normagri avec image en fond */
-.container-head{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-   }
-
-.banner {
-    background-image: url(/images/banner-header.jpg) ;
-    background-size: cover;
-    background-position: center;
-    height:300px;
-    z-index: -1;
-}
-
-#img-logo {
-    height: 150px;
-    position: relative;
- margin-top: 50px;
-    cursor: pointer;
-    z-index: 2;
-    margin-left: 5px;
-}
-
-.MotinNormagri {
-    z-index: 1;
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-
-.MotinNormagri h1 {
-    color: black;
-    filter: drop-shadow(0 0 5px gray);
-
-}
-
-/* Contenu */
-
-.container-content {
-    display: flex;
-    flex-direction: row;
-}
-.gauche {
-    width: 33%;
- 
-}
-
-.droite {
-
-    width: 66%;
-}
-
-#infos {
-    background-color: brown;
-  }
-
-#promos {
-    background-color: green; 
-
-}
-
-#contacts {
-    background-color: yellowgreen;
-}
-
-#articles {
-       background-color: gray;
-}

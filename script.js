@@ -1,3 +1,39 @@
+
+// animation du caroussel //
+const imageNodeList = document.querySelector('.slider').getElementsByTagName('img');
+const items=Array.from(imageNodeList);
+const nbSlide = items.lenght;
+const suivant = document.querySelector('right');
+const precedent = document.querySelector('left');
+let count = 0 ;
+
+function slideSuivante(){
+    items[count].classList.remove('active');
+        if(count < nbSlide - 1){
+        count++;
+    }else{
+        count=0;
+    }
+    items[count].classList.add('active')
+       console.log(count);
+
+}
+function slidePrecedente(){
+    items[count].classList.remove('active');
+    if(count>0){
+        count--;
+    }else{
+        count = nbSlide-1;
+    }
+    items[count].classList.add('active')
+}
+
+
+suivant.addEventListener("click",slideSuivante);
+precedent.addEventListener("click",slidePrecedente);
+
+
+// animation du menu hamburger //
 const hamburgerToggler = document.querySelector(".hamburger")
 const navLinksContainer = document.querySelector(".navlinks-container");
 const toggleNav = () => {
@@ -13,10 +49,13 @@ hamburgerToggler.addEventListener("click",toggleNav);
 
 
 new ResizeObserver(entries => {
-    console.log(entries);
+    // console.log(entries);
     if(entries[0].contentRect.width <=900){
         navLinksContainer.style.transition = "transform 0.3s ease-out"
     } else {
         navLinksContainer.style.transition = "none"
     }
 }).observe(document.body)
+
+
+
