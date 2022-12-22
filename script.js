@@ -1,10 +1,12 @@
 
-// animation du caroussel //
-const imageNodeList = document.querySelector('.slider').getElementsByTagName('img');
-const items=Array.from(imageNodeList);
-const nbSlide = items.lenght;
-const suivant = document.querySelector('right');
-const precedent = document.querySelector('left');
+// animation du caroussel Promos-IMG//
+
+
+const slider= document.querySelector(".slider");
+const items=slider.getElementsByTagName("img");
+const nbSlide = items.length;
+const suivant = document.querySelector('.right');
+const precedent = document.querySelector('.left');
 let count = 0 ;
 
 function slideSuivante(){
@@ -15,7 +17,7 @@ function slideSuivante(){
         count=0;
     }
     items[count].classList.add('active')
-       console.log(count);
+      
 
 }
 function slidePrecedente(){
