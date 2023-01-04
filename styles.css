@@ -9,7 +9,7 @@
 body {
   /* max-width: 1400px;
     margin: auto; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Lato, Helvetica, sans-serif;
   background: #f4f4f4;
   display: block;
 }
@@ -21,10 +21,11 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #a3b0b8;
+  background-color: #babbbb;
+  opacity: 0.95;
   display: flex;
   align-items: center;
-  padding: 15px 25px;
+  padding: 10px 10px;
   box-shadow: inset Opx -1px 0px #c5c5c6;
   z-index: 100;
 }
@@ -33,7 +34,7 @@ nav {
   margin-right: 20px;
 }
 .nav-icon img {
-  width: 40px;
+  width: 100px;
   /* transform: rotate(-17deg) translate(5px); */
 }
 
@@ -80,22 +81,44 @@ nav {
 .sign-user {
   display: none;
 }
+
 /* Bannière Motin Normagri avec image en fond */
+
 .container-head {
+  --bg-image: url(/images/banner-header.jpg);
+  --bg-image-opacity: 0.4;
+
   display: flex;
-  background-image: url(/images/banner-header.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 360px;
+  height: 500px;
   width: 100%;
   margin: 0;
   padding: 0;
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height: 500px;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.container-head::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #babbbb;
+  opacity: var(--bg-image-opacity);
+
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
 }
 
 .img-logo {
   height: 150px;
   position: relative;
-  margin-top: 100px;
   cursor: pointer;
   z-index: 2;
   margin-left: 5px;
@@ -105,6 +128,7 @@ nav {
   z-index: 1;
   margin-left: 20px;
   margin-top: 80px;
+  font-size: 72px;
 }
 
 .CompanyName h1 {
@@ -198,7 +222,33 @@ p.active {
   background-color: gray;
 }
 
-/* Pour ecran tablette >900px */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.marques {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.marques .marques-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.marques .marque {
+  height: 100px;
+  width: 250px;
+}
 
 .container-foot {
   display: flex;
@@ -206,7 +256,7 @@ p.active {
   background-color: rgb(51, 51, 51);
   color: #f4f4f4;
   font-weight: 400;
-  align-items: center;
+  align-items: top;
   justify-content: center;
 }
 
@@ -217,10 +267,11 @@ footer div h5 {
   font-weight: 200;
 }
 
+/* Pour ecran tablette <900px */
+
 @media (max-width: 900px) {
   nav {
     padding: 15px 20px;
-    position: relative;
   }
 
   .nav-icon {

@@ -4,14 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
 
     <title>
-      MOTIN NORMAGRI concession de matériel agricole, tracteurs Massey
+      MOTIN NORMAGRI - concession de matériel agricole, tracteurs Massey
     </title>
     <script
       src="https://kit.fontawesome.com/3e106b875f.js"
@@ -19,6 +26,11 @@
     ></script>
   </head>
   <body>
+    <div class="container-head">
+      <h1 class="CompanyName">MOTIN NORMAGRI</h1>
+      <h3>Concession de machines agricoles</h3>
+    </div>
+
     <nav>
       <a
         href="#"
@@ -43,13 +55,32 @@
           <span></span>
         </button>
         <div class="navlinks-container">
-          <a href="#" aria-current="page">Accueil</a>
-          <a href="#" aria-current="page des occasions">Occasions</a>
-          <a href="#" aria-current="page des neufs">Neufs</a>
-          <a href="#" aria-current="page vers Binage">Binage de précision</a>
-          <a href="#" aria-current="page vers Marques">Marques</a>
-          <a href="#" aria-current="page vers Services">Services</a>
-          <a href="#" aria-current="page vers Recrutement">Recrutement</a>
+          <a
+            href="quisommesnous.html"
+            aria-current="page de présentation entreprise"
+            >L'entreprise</a
+          >
+          <a href="nosbases.html" aria-current="page de nos bases">Nos bases</a>
+          <a href="nosservices.html" aria-current="page de nos services"
+            >Nos Services</a
+          >
+          <a
+            href="https://www.agriaffaires.com/pros/list/140535-0/1/motin-normagri.html"
+            aria-current="page vers Binage"
+            target="_blank"
+            title="Voir toutes nos offres sur Agriaffaires"
+            >Nos Occasions</a
+          >
+          <a href="recrutement.html" aria-current="page vers Marques"
+            >Nous recrutons</a
+          >
+          <a
+            href="https://www.masseyferguson.com/fr_fr.html"
+            target="_blank"
+            aria-current="page vers Services"
+            title="Visitez le site de Massey FergusonS"
+            >Massey Ferguson</a
+          >
         </div>
       </div>
       <div class="nav-authentication">
@@ -61,12 +92,6 @@
         </div>
       </div>
     </nav>
-
-    <div class="container-head">
-      <div class="CompanyName">
-        <h1>MOTIN <br />NORMAGRI</h1>
-      </div>
-    </div>
 
     <div class="container-content">
       <div class="gauche">
@@ -97,11 +122,12 @@
         <aside class="promos">
           <h1>Sélection du moment</h1>
           <div class="slider">
-            <img
-              class="active"
-              src="images/tracteur_bleu.jpeg"
-              alt="tracteur bleu"
-            />
+            <a href="https://www.motin.fr/fr/257110-presse-mf" target="_blank"
+              ><img
+                class="active"
+                src="images/tracteur_bleu.jpeg"
+                alt="tracteur bleu"
+            /></a>
             <p class="active">50 000€</p>
             <img src="images/tracteur_rouge.jpeg" alt="tracteur_rouge" />
             <img src="images/tracteur_vert.jpeg" alt="tracteur_vert" />
@@ -155,37 +181,164 @@
       </div>
     </div>
 
+    <div class="marques">
+      <div class="marques-track">
+        <div class="marque">
+          <img
+            src="images/marque_mf.jpg"
+            height="100"
+            width="250"
+            alt="massey ferguson"
+          />
+        </div>
+        <div class="marque">
+          <img
+            src="images/marque_pottinger.gif"
+            height="100"
+            width="250"
+            alt="pottinger"
+          />
+        </div>
+        <div class="marque">
+            <img
+              src="images/marque_belair.png"
+              height="100"
+              width="250"
+              alt="belair"
+            /> </div>
+
+            <div class="marque">
+              <img
+                src="images/marque_sma.png"
+                height="100"
+                width="250"
+                alt="sma"
+              /> </div>
+           
+            <div class="marque">
+              <img
+                src="images/marque_joskin.png"
+                height="100"
+                width="250"
+                alt="joskin"
+              />
+            </div>
+            <div class="marque">
+              <img
+                src="images/marque_kverneland.png"
+                height="100"
+                width="250"
+                alt="kverneland"
+              />
+            </div>
+            <div class="marque">
+              <img
+                src="images/marque_faresin.png"
+                height="100"
+                width="250"
+                alt="faresin"
+              />
+            </div>
+            <div class="marque">
+              <img
+                src="images/marque_thievin.jpeg"
+                height="100"
+                width="250"
+                alt="thievin"
+              />
+            </div>
+            <div class="marque">
+              <img
+                src="images/marque_mx.png"
+                height="100"
+                width="250"
+                alt="mx"
+              />
+            </div>
+            <div class="marque">
+              <img
+                src="images/marque_alo.png"
+                height="100"
+                width="250"
+                alt="alo"
+              />
+            </div>
+            <div class="marque">
+              <img
+                src="images/marque_weidemann.png"
+                height="100"
+                width="250"
+                alt="weideman"
+              />
+            </div>
+            <div class="marque">
+              <img
+                src="images/marque_phenix.png"
+                height="100"
+                width="250"
+                alt="phenix"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="container-foot">
       <div>
+        <img
+          class="img-logo"
+          src="/images/Logo_Motin_Normagri_nv_ logo_mf.png"
+          alt="Motin Normagri"
+        />
+      </div>
+      <div>
         <h3>Occasions et Export</h3>
-        <h5>Maxime Jouenne <br />m.jouenne@motin.fr <br />+33 7 82 05 02 80</h5>
+        <h5>
+          Maxime Jouenne <br />
+          <i class="material-icons" style="font-size: 14px">local_phone</i>+33 7
+          82 05 02 80 <br />
+          <i class="material-icons" style="font-size: 14px">mail_outline</i
+          >m.jouenne@motin.fr <br />
+        </h5>
       </div>
       <div>
         <h3>MOTIN SAINT GILLES</h3>
         <h5>
-          Route de Saint-Lô <br />50180 SAINT GILLES <br />Tél: +33 2 33 77 46
-          20<br />Fax: +33 2 33 77 46 29<br />e-mail: accueil@motin.fr
+          Route de Saint-Lô <br />50180 SAINT GILLES <br />
+          <i class="material-icons" style="font-size: 14px">local_phone</i> +33
+          2 33 77 46 20<br /><i class="material-icons" style="font-size: 14px"
+            >mail_outline</i
+          >
+          accueil@motin.fr
         </h5>
       </div>
       <div>
         <h3>MOTIN VIRE</h3>
         <h5>
-          ZA La Papillionnière <br />14500 VIRE <br />Tél: +33 2 31 68 36 04
-          <br />Fax: +33 2 31 68 37 15<br />e-mail: accueil@motin.fr
+          ZA La Papillionnière <br />14500 VIRE <br />
+          <i class="material-icons" style="font-size: 14px">local_phone</i>+33 2
+          31 68 36 04 <br /><i class="material-icons" style="font-size: 14px"
+            >mail_outline</i
+          >accueil@motin.fr
         </h5>
       </div>
       <div>
         <h3>NORMAGRI</h3>
         <h5>
-          Les Biards <br />50540 ISIGNY LE BUAT <br />Tél: +33 2 33 89 22 00
-          <br />Fax: +33 2 33 89 22 06<br />e-mail: normagri@normagri.fr
+          Les Biards <br />50540 ISIGNY LE BUAT <br />
+          <i class="material-icons" style="font-size: 14px">local_phone</i>+33 2
+          33 89 22 00 <br /><i class="material-icons" style="font-size: 14px"
+            >mail_outline</i
+          >
+          normagri@normagri.fr
         </h5>
       </div>
       <div>
         <h3>HORAIRES D'OUVERTURE</h3>
         <h5>
-          Du lundi au vendredi <br />8h30 à 12h30 et 14h à 18h <br />Samedi
-          <br />8h30 à 12h30<br />Permanence SAV 7/7jours en saison
+          Du lun au ven <br />8h30 à 12h30 et 14h à 18h <br />Sam <br />8h30 à
+          12h30<br />Permanence SAV 7/7j en saison
         </h5>
       </div>
     </footer>
