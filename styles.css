@@ -25,7 +25,7 @@ nav {
   opacity: 1;
   display: flex;
   align-items: center;
-  padding: 10px 10px;
+  padding: 5px 5px;
   box-shadow: inset Opx -1px 0px #c5c5c6;
   z-index: 100;
 }
@@ -85,7 +85,7 @@ nav {
 /* Bannière Motin Normagri avec image en fond */
 
 .container-head {
-  --bg-image: url(/images/banner-header.jpg);
+  --bg-image: url(/images/base_motin1.jpg);
   --bg-image-opacity: 0.4;
 
   display: flex;
@@ -118,6 +118,7 @@ nav {
 
 .CompanyName {
   font-size: 72px;
+  margin-top: 250px;
 }
 
 .container-head h1 {
