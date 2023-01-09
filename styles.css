@@ -173,6 +173,56 @@ p.active {
   cursor: pointer;
 } */
 
+/* IMPLANTATION */
+
+.implantations {
+  width: 80%;
+}
+.implantations h2 {
+  padding: 15px 0 15px 0;
+  color: rgb(51, 51, 51);
+}
+
+.img-implantation {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* NOTRE ACTUALITE */
+
+.news {
+  width: 80%;
+}
+
+.news h2 {
+  padding: 15px 0 15px 0;
+  color: rgb(51, 51, 51);
+}
+
+.slider-box {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.main-slider {
+  /* position: relative; */
+  width: 640px;
+  padding-top: 320px;
+  margin: 20px auto;
+  box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.8);
+}
+
+.main-slider > img {
+  left: 0;
+  top: 0;
+  transition: all 0.6s;
+}
+
+/* bandeau défilant Marques */
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -182,7 +232,6 @@ p.active {
   }
 }
 
-/* bandeau défilant Marques */
 .marques {
   height: 80px;
   margin: auto;
