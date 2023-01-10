@@ -194,6 +194,7 @@ p.active {
 
 .news {
   width: 80%;
+  margin: 15px;
 }
 
 .news h2 {
@@ -201,7 +202,53 @@ p.active {
   color: rgb(51, 51, 51);
 }
 
-.slider-box {
+.slide-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.slider img {
+  max-width: 500px;
+  max-height: 500px;
+  display: none;
+  margin: auto;
+}
+
+img.active {
+  display: block;
+  animation: fade 0.8s;
+}
+p.active {
+  display: block;
+  animation: fade 0.8s;
+}
+
+@keyframes fades {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cont-btn {
+  width: 500px;
+  margin: auto;
+  height: auto;
+  border: 1px solid rgb(112, 112, 112);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-nav {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+/* .slider-box {
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -209,17 +256,17 @@ p.active {
 
 .main-slider {
   /* position: relative; */
-  width: 640px;
+/* width: 640px;
   padding-top: 320px;
   margin: 20px auto;
   box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.8);
-}
+} */
 
-.main-slider > img {
+/* .main-slider > img {
   left: 0;
   top: 0;
   transition: all 0.6s;
-}
+} */
 
 /* bandeau défilant Marques */
 
@@ -234,11 +281,11 @@ p.active {
 
 .marques {
   height: 80px;
-  margin: auto;
+
   overflow: hidden;
   position: relative;
   width: auto;
-  margin: 5px 0 5px 0;
+  margin: 25px 0;
 }
 
 .marques .marques-track {

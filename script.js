@@ -1,6 +1,5 @@
 
-// animation du caroussel Promos-IMG//
-
+// Slider ACTUALITES //
 
 const slider= document.querySelector(".slider");
 const items=slider.getElementsByTagName("img");
@@ -29,7 +28,6 @@ function slidePrecedente(){
     }
     items[count].classList.add('active')
 }
-
 
 suivant.addEventListener("click",slideSuivante);
 precedent.addEventListener("click",slidePrecedente);
